@@ -1,0 +1,62 @@
+<html>
+
+<head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Yatra+One&display=swap" rel="stylesheet">
+</head>
+
+<style>
+#content {
+  left: 0; 
+  right: 0; 
+  margin-left: auto; 
+  margin-right: auto; 
+  width: 100px;
+}
+</style>
+
+<body style="background: url('https://images.srkh.in/wp-content/uploads/2020/10/Happy-Diwali-Gif.gif');
+  background-repeat: no-repeat; background-color: #c924de;
+  background-size: auto 130%; background-position: center center;">
+
+
+  <div style="position: absolute; left: 50%; margin-top: 25vh;">
+    <div style="position: relative; color: #fbc8e2;  font-family: 'Yatra One', cursive; font-size: 64px;" id="nameUser">
+      
+    </div>
+  </div>
+
+  <div>
+  
+  <div style="position: absolute; bottom: 0; right: 0; text-align: right; width: 40%;color: #fbc8e2; font-family: 'Yatra One', cursive; font-size: 20px; ">You can send this to your friends with your name. Please enter your name here.
+  <br />
+  <input type="text" id="uI" style="margin: 8px;"  ></input>
+  <button onclick="createUrl()" style="background-color: #c924de;margin: 8px; color: #fff; border-color: #c924de;font-family: 'Yatra One', cursive; font-size: 16px; " >Create new one</button>
+  </div>
+  </div>
+
+</body>
+
+
+<script>
+
+	var x = this.location.search.split('=')[1];
+	if(x != undefined) {
+		document.getElementById('nameUser').innerHTML = x;
+	} else {
+	}
+	console.log(x);
+	
+	function createUrl() {
+	console.log('e');
+		var o = document.getElementById('uI').value;
+		if(o != undefined) {
+		window.open( window.location.pathname + '?name=' + o , "_blank");
+		} else {
+		
+		}
+}	
+</script>
+
+</html>
